@@ -9,40 +9,70 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.hudway.databinding.ActivityMapsBinding
+
+import android.view.View
+
+import androidx.constraintlayout.widget.ConstraintLayout
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var mMap: GoogleMap
-    private lateinit var binding: ActivityMapsBinding
+    public fun onClick_StartNav(view: View) { //layout change
+        val start_lay = findViewById<View>(R.id.Start_layout) as ConstraintLayout
+        val nav_lay = findViewById<View>(R.id.Navigator_layout) as ConstraintLayout
+        val nav_lay_down = findViewById<View>(R.id.Navigator_layout_down) as ConstraintLayout
+        start_lay.visibility = View.GONE
+        nav_lay.visibility = View.VISIBLE
+        nav_lay_down.visibility = View.VISIBLE
+    }
+
+    public fun onClick_EndNav(view: View) { //layout change
+        val start_lay = findViewById<View>(R.id.Start_layout) as ConstraintLayout
+        val nav_lay = findViewById<View>(R.id.Navigator_layout) as ConstraintLayout
+        val nav_lay_down = findViewById<View>(R.id.Navigator_layout_down) as ConstraintLayout
+        nav_lay.visibility = View.GONE
+        nav_lay_down.visibility = View.GONE
+        start_lay.visibility = View.VISIBLE
+    }
+
+    public fun onClick_locate(view: View) { //locate_btn action
+
+    }
+
+    public fun onClick_notifications(view: View) { //notification_btn action
+
+    }
+
+    public fun onClick_fave(view: View) { //fave_btn action
+
+    }
+
+    public fun onClick_options(view: View) { //options_btn action
+
+    }
+
+    public fun onClick_sync(view: View) { //sync_btn action
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Retrieve the content view that renders the map.
+        setContentView(R.layout.activity_maps)
 
-        binding = ActivityMapsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+        // Get the SupportMapFragment and request notification when the map is ready to be used.
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val izhevsk = LatLng(56.8498, 53.2045)
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(izhevsk)
+                .title("Marker in Izhevsk (maybe)")
+        )
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(izhevsk))
     }
+
 }
