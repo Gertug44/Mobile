@@ -11,17 +11,22 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 import android.view.View
+import android.widget.EditText
 
 import com.example.hudway.databinding.ActivityMapsBinding
 import com.example.hudway.fragments.MainHeaderFragment
 import com.example.hudway.fragments.NavigationHeaderFragment
 import com.example.hudway.interfaces.NavigationPasser
 
+import androidx.constraintlayout.widget.ConstraintLayout
+import org.w3c.dom.Text
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationPasser {
+
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(s    avedInstanceState)
+
         setContentView(R.layout.activity_maps)
 
         if (savedInstanceState == null) {
