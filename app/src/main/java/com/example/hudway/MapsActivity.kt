@@ -11,8 +11,10 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 import android.view.View
+import android.widget.EditText
 
 import androidx.constraintlayout.widget.ConstraintLayout
+import org.w3c.dom.Text
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -21,9 +23,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val start_lay = findViewById<View>(R.id.Start_layout) as ConstraintLayout
         val nav_lay = findViewById<View>(R.id.Navigator_layout) as ConstraintLayout
         val nav_lay_down = findViewById<View>(R.id.Navigator_layout_down) as ConstraintLayout
+        val start = findViewById<View>(R.id.address_start) as EditText
+        val end = findViewById<View>(R.id.address_end) as EditText
+        val start_text = start.text.toString()
+        val end_text = end.text.toString()
+        val regex = Regex("\\d+")
+        val resultList = regex.findAll(start_text+end_text).map { it.value }.toList()
         start_lay.visibility = View.GONE
         nav_lay.visibility = View.VISIBLE
         nav_lay_down.visibility = View.VISIBLE
+        //getapi("http://project.my/index.php?r=api%2Fgetapi&FromLat="+resultList[0]+"&FromLng="+resultList[1]+"&ToLat="+resultList[2]+"&ToLng="+resultList[3])
     }
 
     public fun onClick_EndNav(view: View) { //layout change
@@ -56,7 +65,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(s    avedInstanceState)
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps)
 
