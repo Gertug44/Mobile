@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MainHeaderFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Start_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#646060">
+
+        <EditText
+            android:id="@+id/address_start"
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="36dp"
+            android:layout_margin="20dp"
+            android:background="@color/bg_color_gr"
+            android:backgroundTint="#C4C4C4"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:autofillHints="no" />
+
+        <EditText
+            android:id="@+id/address_end"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/address_start"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_color_gr"
+            android:backgroundTint="#C4C4C4"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:importantForAutofill="no" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_end">
+
+            <Button
+                android:id="@+id/nav_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@color/bg_color_red"
+                android:text="Проложить маршрут"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_end"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/locate_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@color/bg_color_gre"
+                android:text="Определить местоположение"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_end"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Tools_layout"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:background="#FFA800"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="210dp">
+
+            <Button
+                android:id="@+id/sync_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@color/bg_color_or"
+                android:onClick="onClick_sync"
+                android:text="Синхронизация"
+                android:textSize="11sp"
+                android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/options_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@color/bg_color_or"
+                android:onClick="onClick_options"
+                android:text="Настройки"
+                android:textSize="11sp"
+                android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/notifications_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@color/bg_color_or"
+                android:onClick="onClick_notifications"
+                android:text="Оповещения"
+                android:textSize="11sp"
+                android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/fave_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:background="@color/bg_color_or"
+                android:onClick="onClick_fave"
+                android:text="Избранное"
+                android:textSize="11sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
