@@ -94,33 +94,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="29dp"
                 android:background="@color/bg_color_or"
-                android:onClick="onClick_sync"
-                android:text="Синхронизация"
+                android:text="@string/synchronization"
                 android:textSize="11sp"
                 android:layout_weight="1"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/options_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="29dp"
                 android:background="@color/bg_color_or"
-                android:onClick="onClick_options"
-                android:text="Настройки"
+                android:text="@string/settings"
                 android:textSize="11sp"
                 android:layout_weight="1"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/notifications_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="29dp"
                 android:background="@color/bg_color_or"
-                android:onClick="onClick_notifications"
-                android:text="Оповещения"
+                android:text="@string/notifications"
                 android:textSize="11sp"
                 android:layout_weight="1"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/fave_btn"
@@ -128,10 +128,10 @@
                 android:layout_height="29dp"
                 android:layout_weight="1"
                 android:background="@color/bg_color_or"
-                android:onClick="onClick_fave"
-                android:text="Избранное"
+                android:text="@string/favorites"
                 android:textSize="11sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck"
+                style="?android:attr/buttonBarButtonStyle" />
 
         </LinearLayout>
 
