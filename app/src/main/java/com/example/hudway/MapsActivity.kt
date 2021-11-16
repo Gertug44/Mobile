@@ -22,10 +22,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import org.w3c.dom.Text
 
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationPasser {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(s    avedInstanceState)
+        super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_maps)
 

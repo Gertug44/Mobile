@@ -6,90 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".LogInAcivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/HUDWAY"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
     <TextView
         android:id="@+id/EnterEmail"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
         android:text="Введите вашу почту:"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="222dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/EnterPassword"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:text="Введите ваш пароль:"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
 
     <EditText
         android:id="@+id/Password"
-        android:layout_width="350dp"
-        android:layout_height="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="339dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterPassword"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/SIgnIn"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="120dp"
         android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#C4C4C4"
         android:text="Войти"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/SignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <Button
         android:id="@+id/SignUp"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="220dp"
         android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         android:backgroundTint="#C4C4C4"
         android:text="Зарегистироваться"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintBottom_toTopOf="@+id/restorePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SIgnIn"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <Button
         android:id="@+id/restorePassword"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="151dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#00FFFFFF"
         android:text="Восстановить"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="456dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="120dp"
         android:layout_height="21dp"
+        android:layout_marginTop="12dp"
         android:text="забыли пароль?"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="456dp" />
+        app:layout_constraintEnd_toStartOf="@+id/restorePassword"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SIgnIn" />
 
     <EditText
         android:id="@+id/EmailAddress"
-        android:layout_width="350dp"
-        android:layout_height="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="258dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterEmail"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
