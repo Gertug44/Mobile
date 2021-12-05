@@ -23,7 +23,7 @@ class registration : AppCompatActivity() {
         val json1=gson.toJson(json)
         if (!pass_text.equals(pass2_text))
             Toast.makeText(applicationContext, "пароли не соответствуют", Toast.LENGTH_LONG)
-        val url = "http://test.local/web/user/login/$json1"
+        val url = "http://hudwayapi.my/web/user/login/$json1"
         val connection = URL(url).openConnection() as HttpURLConnection
         try {
             connection.connect()

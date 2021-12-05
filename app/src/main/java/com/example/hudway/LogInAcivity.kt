@@ -22,7 +22,7 @@ class LogInAcivity : AppCompatActivity() {
         val json = ("log "+email_text+"pass "+pass_text)
         val gson = Gson()
         val json1=gson.toJson(json)
-        val url = "http://test.local/web/user/login/$json1"
+        val url = "http://hudwayapi.my/web/user/login/$json1"
         val connection = URL(url).openConnection() as HttpURLConnection
         try {
             connection.connect()

@@ -16,7 +16,7 @@ class ResetPassword : AppCompatActivity() {
         val json = ("log $email_text")
         val gson = Gson()
         val json1=gson.toJson(json)
-        val url = "http://test.local/web/user/change/$json1"
+        val url = "http://hudwayapi.my/web/user/change/$json1"
         val connection = URL(url).openConnection() as HttpURLConnection
         try {
             connection.connect()
