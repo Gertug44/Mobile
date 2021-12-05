@@ -50,7 +50,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationPasser {
         setContentView(R.layout.activity_maps)
 
         if (savedInstanceState == null) {
-            val mainHeaderFragment = MainHeaderFragment()
+            val mainHeaderFragment =  MainHeaderFragment()
             supportFragmentManager.beginTransaction()
                 .replace(
                     R.id.topFragmentContainer,
