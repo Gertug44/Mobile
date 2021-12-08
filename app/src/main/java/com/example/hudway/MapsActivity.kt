@@ -23,6 +23,8 @@ import org.w3c.dom.Text
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationPasser {
+    private var way : String = ""
+    lateinit var map : GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

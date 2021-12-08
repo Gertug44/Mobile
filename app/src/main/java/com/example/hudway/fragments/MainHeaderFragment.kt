@@ -2,14 +2,13 @@ package com.example.hudway.fragments
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.hudway.R
 import com.example.hudway.databinding.FragmentMainHeaderBinding
 import com.example.hudway.interfaces.NavigationPasser
-import com.google.android.gms.maps.model.LatLng
 
 class MainHeaderFragment : Fragment() {
 
@@ -38,11 +37,10 @@ class MainHeaderFragment : Fragment() {
         binding = FragmentMainHeaderBinding.bind(view)
             .apply {
                 navBtn.setOnClickListener {
-                    navigationPasser?.passCoords(LatLng(2.4, 3.3), LatLng(2.2, 3.3))
+
                 }
 
                 locateBtn.setOnClickListener {
-                    //Not Implemented
                 }
             }
         return view
